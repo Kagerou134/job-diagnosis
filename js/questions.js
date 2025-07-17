@@ -2,103 +2,103 @@
 
 const questions = [
   {
-    text: "目的地に向かうなら？",
+    text: "困難に直面したとき、あなたはどうする？",
     answers: [
-      { text: "最短距離で一直線", type: "warrior" },
-      { text: "地図をチェックして最適ルート", type: "mage" },
-      { text: "人混みを避けて裏道", type: "thief" },
-      { text: "みんなの歩調に合わせる", type: "priest" },
-      { text: "飛んで行く", type: "dragon" }
+      { text: "とにかく動いて突破口を探す", type: "warrior" },
+      { text: "まず状況を整理し戦略を立てる", type: "mage" },
+      { text: "他に抜け道がないか探る", type: "thief" },
+      { text: "周囲の人に相談しながら考える", type: "priest" },
+      { text: "流れに逆らわず、自分のタイミングを待つ", type: "dragon" }
     ]
   },
   {
-    text: "失敗した時の反応は？",
+    text: "初対面の人にどう接する？",
     answers: [
-      { text: "次は成功させる！", type: "warrior" },
-      { text: "原因分析して対策", type: "mage" },
-      { text: "気にしない", type: "thief" },
-      { text: "反省して次に活かす", type: "priest" },
-      { text: "そもそも失敗しない", type: "dragon" }
+      { text: "自分から明るく話しかける", type: "warrior" },
+      { text: "相手の様子を見てから距離を詰める", type: "mage" },
+      { text: "軽い冗談で場を和ませる", type: "thief" },
+      { text: "丁寧に挨拶して関係を築く", type: "priest" },
+      { text: "無理に合わせず自然体で接する", type: "dragon" }
     ]
   },
   {
-    text: "宝箱を見つけたら？",
+    text: "自分にとっての「強さ」とは？",
     answers: [
-      { text: "まず開ける！", type: "warrior" },
-      { text: "トラップを警戒", type: "mage" },
-      { text: "周囲を探索してから", type: "thief" },
-      { text: "仲間に相談する", type: "priest" },
-      { text: "破壊する", type: "dragon" }
+      { text: "恐れずに前に進めること", type: "warrior" },
+      { text: "状況を見極めて判断できること", type: "mage" },
+      { text: "どんな環境にも対応できること", type: "thief" },
+      { text: "誰かを支えることができること", type: "priest" },
+      { text: "他人に振り回されずに在ること", type: "dragon" }
     ]
   },
   {
-    text: "チームで意見が割れたら？",
+    text: "休みの日の理想の過ごし方は？",
     answers: [
-      { text: "自分の意見を通す", type: "warrior" },
-      { text: "ロジックで説得", type: "mage" },
-      { text: "空気読んで回避", type: "thief" },
-      { text: "仲裁する", type: "priest" },
-      { text: "無視して勝手に行動", type: "dragon" }
+      { text: "体を動かしてリフレッシュ", type: "warrior" },
+      { text: "知識を深める時間に使う", type: "mage" },
+      { text: "気の向くままにふらっと出かける", type: "thief" },
+      { text: "落ち着いた場所で人と過ごす", type: "priest" },
+      { text: "一人で好きなことに没頭する", type: "dragon" }
     ]
   },
   {
-    text: "暇な時間、何してる？",
+    text: "褒められたとき、あなたは？",
     answers: [
-      { text: "体を動かす", type: "warrior" },
-      { text: "読書や調べ物", type: "mage" },
-      { text: "散歩", type: "thief" },
-      { text: "誰かと話す", type: "priest" },
-      { text: "ぼーっと空見てる", type: "dragon" }
+      { text: "もっと頑張ろうと思う", type: "warrior" },
+      { text: "表面上は冷静だが嬉しい", type: "mage" },
+      { text: "軽く流すけど内心はガッツポーズ", type: "thief" },
+      { text: "謙虚に感謝を伝える", type: "priest" },
+      { text: "自分の価値を再確認する", type: "dragon" }
     ]
   },
   {
-    text: "尊敬するのは？",
+    text: "チームでのあなたの役割は？",
     answers: [
-      { text: "情熱で突き進む人", type: "warrior" },
-      { text: "知的で冷静な人", type: "mage" },
-      { text: "臨機応変な人", type: "thief" },
-      { text: "優しくて包容力ある人", type: "priest" },
-      { text: "誰にも縛られない存在", type: "dragon" }
+      { text: "全体を引っ張るムードメーカー", type: "warrior" },
+      { text: "計画立てて裏から支える参謀", type: "mage" },
+      { text: "場の空気を和ませるバランサー", type: "thief" },
+      { text: "不安を受け止める癒し系", type: "priest" },
+      { text: "自分の得意分野だけを確実にこなす職人型", type: "dragon" }
     ]
   },
   {
-    text: "褒められたら？",
+    text: "理想のリーダー像は？",
     answers: [
-      { text: "嬉しくて頑張る", type: "warrior" },
-      { text: "心の中で喜ぶ", type: "mage" },
-      { text: "照れる", type: "thief" },
-      { text: "相手にお礼言う", type: "priest" },
-      { text: "当然だと思う", type: "dragon" }
+      { text: "熱意があって背中で語れる人", type: "warrior" },
+      { text: "常に冷静で論理的な人", type: "mage" },
+      { text: "ユーモアがあって柔軟な人", type: "thief" },
+      { text: "優しさと誠実さがある人", type: "priest" },
+      { text: "自分の軸をブレずに持っている人", type: "dragon" }
     ]
   },
   {
-    text: "冒険中に迷ったら？",
+    text: "あなたが一番大事にしていることは？",
     answers: [
-      { text: "勘で進む", type: "warrior" },
-      { text: "全体地図から再構成", type: "mage" },
-      { text: "周囲の音を頼りに動く", type: "thief" },
-      { text: "仲間に聞く", type: "priest" },
-      { text: "突き進む（なんとかなる）", type: "dragon" }
+      { text: "信念", type: "warrior" },
+      { text: "知識と理解", type: "mage" },
+      { text: "自由", type: "thief" },
+      { text: "優しさと共感", type: "priest" },
+      { text: "自分らしさ", type: "dragon" }
     ]
   },
   {
-    text: "仲間が褒められたら？",
+    text: "トラブル発生！どう動く？",
     answers: [
-      { text: "自分も負けない！", type: "warrior" },
-      { text: "それなりに嬉しい", type: "mage" },
-      { text: "しれっとニヤける", type: "thief" },
-      { text: "一緒に喜ぶ", type: "priest" },
-      { text: "興味ない", type: "dragon" }
+      { text: "先頭に立って解決に動く", type: "warrior" },
+      { text: "冷静に情報を集めて対応する", type: "mage" },
+      { text: "状況を見て臨機応変に動く", type: "thief" },
+      { text: "周囲を落ち着かせて協力を呼びかける", type: "priest" },
+      { text: "あえて静観し、流れを見守る", type: "dragon" }
     ]
   },
   {
-    text: "自分の強みは？",
+    text: "あなたにとって「仲間」とは？",
     answers: [
-      { text: "行動力", type: "warrior" },
-      { text: "知識量", type: "mage" },
-      { text: "頭の回転", type: "thief" },
-      { text: "優しさ", type: "priest" },
-      { text: "圧倒的個性", type: "dragon" }
+      { text: "共に戦う仲間", type: "warrior" },
+      { text: "情報を共有し合う知的な存在", type: "mage" },
+      { text: "楽しい時間を共にする気の合う人たち", type: "thief" },
+      { text: "助け合える心の支え", type: "priest" },
+      { text: "それぞれが自分の道を歩む同志", type: "dragon" }
     ]
   }
 ];
