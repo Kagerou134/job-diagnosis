@@ -98,7 +98,7 @@ const questions = [
       { text: "助け合える心の支え", points: { priest: 2, dragon: 1 } },
       { text: "それぞれが自分の道を歩む同志", points: { dragon: 2, thief: 1 } }
     ]
-  }
+  },
   {
     text: "どんな状況で力を発揮する？",
     answers: [
