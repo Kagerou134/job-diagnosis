@@ -13,12 +13,22 @@ const questionTitle = document.getElementById("question-title");
 const answerButtons = document.getElementById("answer-buttons");
 const progressText = document.getElementById("progress-text");
 
+// 🔀 配列シャッフル関数
+function shuffleArray(array) {
+  return array
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
 function showQuestion() {
   const q = questions[currentQuestion];
+  const shuffledAnswers = shuffleArray(q.answers); // 回答をシャッフル！
+
   questionTitle.textContent = q.text;
   answerButtons.innerHTML = ""; // 一旦クリア
 
-  q.answers.forEach(answer => {
+  shuffledAnswers.forEach(answer => {
     const btn = document.createElement("button");
     btn.textContent = answer.text;
     btn.classList.add("answer-btn");
