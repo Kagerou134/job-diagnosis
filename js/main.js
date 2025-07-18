@@ -1,5 +1,3 @@
-// js/main.js
-
 let currentQuestion = 0;
 let scores = {
   warrior: 0,
@@ -28,25 +26,27 @@ function showQuestion() {
   questionTitle.textContent = q.text;
   answerButtons.innerHTML = ""; // 一旦クリア
 
-  shuffledAnswers.forEach(answer => {
+  shuffledAnswers.forEach((answer, index) => {
     const btn = document.createElement("button");
     btn.textContent = answer.text;
     btn.classList.add("answer-btn");
-    btn.addEventListener("click", () => handleAnswer(answer.type));
+    btn.addEventListener("click", () => handleAnswer(answer));
     answerButtons.appendChild(btn);
   });
 
   progressText.textContent = `Q${currentQuestion + 1} / ${questions.length}`;
 }
 
-function handleAnswer(type) {
-  scores[type]++;
+function handleAnswer(answer) {
+  // 🔁 pointsオブジェクトをもとに複数タイプに加点
+  for (const type in answer.points) {
+    scores[type] += answer.points[type];
+  }
 
   currentQuestion++;
   if (currentQuestion < questions.length) {
     showQuestion();
   } else {
-    // スコアを保存して結果ページへ
     localStorage.setItem("scores", JSON.stringify(scores));
     location.href = "result.html";
   }
